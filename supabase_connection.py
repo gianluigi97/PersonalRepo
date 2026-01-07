@@ -14,7 +14,6 @@ DBNAME = "#############"
 
 DATABASE_URL = f"postgresql+psycopg2://{USER}:{PASSWORD}@{HOST}:{PORT}/{DBNAME}?sslmode=require"
 
-# Create the SQLAlchemy engine
 engine = create_engine(DATABASE_URL)
 
 with Session(engine) as session: 
@@ -24,5 +23,6 @@ with Session(engine) as session:
     result = output.fetchall()
 
     print(pd.DataFrame(result))
+
 
 
