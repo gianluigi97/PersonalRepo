@@ -31,10 +31,11 @@ def file_prep(file_path: str) -> pd.DataFrame:
 
     return dati
 
-path = r'C:\GianC\expense\contabilita\estratto_unicredit'
-file = '20260504.csv'
+path_pc_desktop = r'C:\GianC\expense\contabilita\estratto_unicredit'
+path_mac = r'/Users/gianluigimosti/WorkPlace/PersonalRepo/estratto_unicredit'
+file = '12052026.csv'
 
-df = file_prep(os.path.join(path, file))
+df = file_prep(os.path.join(path_mac, file))
 
 # print(df)
 

@@ -7,10 +7,10 @@ from dotenv import load_dotenv
 
 load_dotenv("chiavi.env")
 
-USER = os.getenv("USER")
-PASSWORD = os.getenv("PASSWORD")
-HOST = os.getenv("HOST")
-PORT = os.getenv("PORT")
+USER = os.getenv("DB_USER")
+PASSWORD = os.getenv("DB_PASSWORD")
+HOST = os.getenv("DB_HOST")
+PORT = os.getenv("DB_PORT")
 DBNAME = os.getenv("DBNAME")
 
 
@@ -19,10 +19,10 @@ DATABASE_URL = f"postgresql+psycopg2://{USER}:{PASSWORD}@{HOST}:{PORT}/{DBNAME}?
 engine = create_engine(DATABASE_URL)
 
 
+path_pc_desktop = r'C:\GianC\expense\contabilita\file_da_caricare.csv'
+path_mac = r'/Users/gianluigimosti/WorkPlace/PersonalRepo/file_da_caricare.csv'
 
-
-
-df = pd.read_csv(r'C:\GianC\expense\contabilita\file_da_caricare.csv', sep=",")
+df = pd.read_csv(path_mac, sep=",")
 
 
 metadata = MetaData()

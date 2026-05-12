@@ -1,3 +1,4 @@
 estratto_unicredit/
 *.env
 file_da_caricare.csv
+venv/
